@@ -1,16 +1,16 @@
 class Mapmap < Formula
   desc "MapMap - Write your thoughts, ideas, and plans in a hierarchical tree diagram"
   homepage "https://github.com/ProPro-Productions/MapMap"
-  version "refs/pull/709/merge"
+  version ""
   license "MIT"
 
   if OS.mac?
     if Hardware::CPU.intel?
-      url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/mapmap_refs/pull/709/merge_x64.dmg"
-      sha256 "adf4f5bca833f0c43fcf81e05692663de4ffd445e0c43cec6ff3bad99d7ae28f"
+      url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/mapmap__x64.dmg"
+      sha256 "072728fd43a92dfa97e60ef9a5814d637debf727d30d3fc109ba8758e9a21376"
     elsif Hardware::CPU.arm?
-      url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/mapmap_refs/pull/709/merge_aarch64.dmg"
-      sha256 "06ff3b92e3fd572662ce7ebdacbf2b5552f1b51ea08e002530d2f70b79cb72cf"
+      url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/mapmap__aarch64.dmg"
+      sha256 "9a8c862be6ce3cea34c5edf4487a921bbbd7b2e8606c1aa286e15b07f60ab384"
     end
   else
     odie "Unsupported operating system"
