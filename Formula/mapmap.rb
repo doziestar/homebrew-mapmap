@@ -6,10 +6,10 @@ class Mapmap < Formula
   if OS.mac?
     if Hardware::CPU.intel?
       url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_x64.dmg"
-      sha256 "8219e56801099050ea3b217d4232b3978854ec9b69daf6aedd22a1742b8f8d58"
+      sha256 "aae1a0538f6f3e09eb84eaf4f920407019c82c4076e67bbd2717d64220614adb"
     elsif Hardware::CPU.arm?
       url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_aarch64.dmg"
-      sha256 "28ea0f501051d8e8a403fed7b02360e6ca9cb8470022f15b8babbf813e47c7b5"
+      sha256 "af0f0a9bb1c175bb4f228691e2b030d1886b9a6a208831d1c130fc1e6e350952"
     end
   else
     odie "Unsupported operating system"
