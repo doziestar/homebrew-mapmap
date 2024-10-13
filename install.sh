@@ -3,21 +3,26 @@
 # MapMap installation script
 # This script detects the operating system and architecture and installs MapMap accordingly.
 
-set -e
+set -e  # Exit on any error
+
+# URLs for DMGs (these will be dynamically updated in GitHub Actions)
+INTEL_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_x86.dmg"
+ARM_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_arm64.dmg"
 
 # Function to install MapMap on macOS
 install_macos() {
   echo "Detected macOS"
-  
+
+  # Determine the architecture and set the URL
   if [ "$(uname -m)" = "arm64" ]; then
-    ARCH="aarch64"
+    ARCH="arm64"
+    DMG_URL="$ARM_DMG_URL"
   else
-    ARCH="x64"
+    ARCH="x86"
+    DMG_URL="$INTEL_DMG_URL"
   fi
 
-  DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/mapmap_${VERSION}_${ARCH}.dmg"
-
-  echo "Downloading MapMap version ${VERSION} for ${ARCH}..."
+  echo "Downloading MapMap for ${ARCH}..."
   curl -L "${DMG_URL}" -o MapMap.dmg
 
   echo "Mounting DMG..."
@@ -38,9 +43,9 @@ install_windows() {
   echo "Detected Windows"
 
   ARCH="x64"
-  MSI_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/mapmap_${VERSION}_${ARCH}.msi"
+  MSI_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_${ARCH}.msi"
 
-  echo "Downloading MapMap version ${VERSION} for ${ARCH}..."
+  echo "Downloading MapMap for ${ARCH}..."
   curl -L "${MSI_URL}" -o MapMap.msi
 
   echo "Running installer..."
@@ -58,8 +63,7 @@ detect_os_and_install() {
   case "${UNAME_OUT}" in
       Linux*)     OS="Linux";;
       Darwin*)    OS="Mac";;
-      CYGWIN*)    OS="Windows";;
-      MINGW*)     OS="Windows";;
+      CYGWIN*|MINGW*|MSYS*) OS="Windows";;
       *)          OS="UNKNOWN:${UNAME_OUT}"
   esac
 
@@ -70,16 +74,8 @@ detect_os_and_install() {
   else
     echo "Unsupported OS: ${OS}"
     exit 1
-  }
+  fi
 }
-
-# Check for version argument
-if [ -z "$1" ]; then
-  echo "Usage: $0 <version>"
-  exit 1
-else
-  VERSION="$1"
-fi
 
 # Start installation process
 detect_os_and_install
