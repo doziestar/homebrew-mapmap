@@ -5,7 +5,6 @@
 
 set -e  # Exit on any error
 
-# Default URLs for latest versions (these should be updated in your CI/CD workflow)
 ARM_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_arm64.dmg"
 INTEL_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_x86.dmg"
 WIN_EXE_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_win.exe"
@@ -23,7 +22,9 @@ else
     exit 1
 fi
 
-# Download and install the latest version based on platform and architecture
+INSTALL_DIR="$HOME/Applications"
+mkdir -p "$INSTALL_DIR"
+
 download_and_install() {
     local url=$1
     local file_name=$2
@@ -42,8 +43,8 @@ download_and_install() {
         echo "Mounting DMG..."
         hdiutil attach "$file_name" -nobrowse
 
-        echo "Copying the app to /Applications..."
-        cp -r /Volumes/MapMap/MapMap.app /Applications/
+        echo "Copying the app to $INSTALL_DIR..."
+        cp -r /Volumes/MapMap/MapMap.app "$INSTALL_DIR/"
 
         echo "Unmounting DMG..."
         hdiutil detach /Volumes/MapMap
@@ -51,7 +52,7 @@ download_and_install() {
         echo "Cleaning up..."
         rm "$file_name"
 
-        echo "MapMap has been installed successfully!"
+        echo "MapMap has been installed in $INSTALL_DIR successfully!"
     elif [[ "$PLATFORM" == "Windows" ]]; then
         echo "Running the installer..."
         start "$file_name"
@@ -76,4 +77,5 @@ elif [[ "$PLATFORM" == "Windows" ]]; then
     echo "Detected Windows platform."
     download_and_install "$WIN_EXE_URL" "MapMap_win.exe"
 fi
+
 
