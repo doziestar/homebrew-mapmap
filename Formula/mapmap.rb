@@ -4,7 +4,7 @@ class Mapmap < Formula
   license "MIT"
 
   ARM_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_arm64.dmg"
-  INTER_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_0.1.1_x86.dmg"
+  INTER_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_x86.dmg"
 
   if OS.mac?
     if Hardware::CPU.intel?
