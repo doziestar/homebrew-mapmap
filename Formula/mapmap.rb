@@ -3,16 +3,16 @@ class Mapmap < Formula
   homepage "https://github.com/ProPro-Productions/MapMap"
   license "MIT"
 
-  ARM_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_0.1.4_arm64.dmg"
+  ARM_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_0.1.5_arm64.dmg"
   INTER_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_0.1.1_x86.dmg"
 
   if OS.mac?
     if Hardware::CPU.intel?
       url ARM_DMG_URL
-      sha256 "df92fce80efc4ceb8a8e3c7e8d0b17c7378e7ce5bdd8113062d2a04fd5f1d8b7"
+      sha256 "0315975c743e5579e3880cd6026a6f4bdc325ebf7ca7709daee5f08431388ff0"
     elsif Hardware::CPU.arm?
       url INTER_DMG_URL
-      sha256 "df92fce80efc4ceb8a8e3c7e8d0b17c7378e7ce5bdd8113062d2a04fd5f1d8b7"
+      sha256 "0315975c743e5579e3880cd6026a6f4bdc325ebf7ca7709daee5f08431388ff0"
     end
   else
     odie "Unsupported operating system"
