@@ -17,12 +17,16 @@ class Mapmap < Formula
 
   def install
     system "hdiutil", "attach", cached_download, "-nobrowse"
-    
+
     app_path = "/Volumes/MapMap/MapMap.app"
-    prefix.install Dir[app_path]
+    if File.exist?(app_path)
+      prefix.install Dir["#{app_path}"]
+    else
+      odie "MapMap.app not found in the mounted DMG"
+    end
 
     system "hdiutil", "detach", "/Volumes/MapMap"
-    
+
     bin.write_exec_script "#{prefix}/MapMap.app/Contents/MacOS/mapmap"
   end
 
