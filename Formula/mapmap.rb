@@ -9,7 +9,7 @@ class Mapmap < Formula
       sha256 "0315975c743e5579e3880cd6026a6f4bdc325ebf7ca7709daee5f08431388ff0"
     elsif Hardware::CPU.arm?
       url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_arm64.dmg"
-      sha256 "ff7454fe7e042967f68f862fb1c6d777deb37cee12cebafb49acf07458f3341b"
+      sha256 "0315975c743e5579e3880cd6026a6f4bdc325ebf7ca7709daee5f08431388ff0"
     end
   else
     odie "Unsupported operating system"
