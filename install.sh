@@ -5,77 +5,75 @@
 
 set -e  # Exit on any error
 
-# URLs for DMGs (these will be dynamically updated in GitHub Actions)
-INTEL_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_x86.dmg"
+# Default URLs for latest versions (these should be updated in your CI/CD workflow)
 ARM_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_arm64.dmg"
+INTEL_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_x86.dmg"
+WIN_EXE_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_win.exe"
 
-# Function to install MapMap on macOS
-install_macos() {
-  echo "Detected macOS"
-
-  # Determine the architecture and set the URL
-  if [ "$(uname -m)" = "arm64" ]; then
-    ARCH="arm64"
-    DMG_URL="$ARM_DMG_URL"
-  else
-    ARCH="x86"
-    DMG_URL="$INTEL_DMG_URL"
-  fi
-
-  echo "Downloading MapMap for ${ARCH}..."
-  curl -L "${DMG_URL}" -o MapMap.dmg
-
-  echo "Mounting DMG..."
-  hdiutil attach MapMap.dmg
-
-  echo "Copying MapMap to Applications..."
-  cp -r /Volumes/MapMap/MapMap.app /Applications/
-
-  echo "Cleaning up..."
-  hdiutil detach /Volumes/MapMap
-  rm MapMap.dmg
-
-  echo "MapMap has been successfully installed! You can find it in your Applications folder."
-}
-
-# Function to install MapMap on Windows
-install_windows() {
-  echo "Detected Windows"
-
-  ARCH="x64"
-  MSI_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_${ARCH}.msi"
-
-  echo "Downloading MapMap for ${ARCH}..."
-  curl -L "${MSI_URL}" -o MapMap.msi
-
-  echo "Running installer..."
-  msiexec /i MapMap.msi /qn
-
-  echo "Cleaning up..."
-  rm MapMap.msi
-
-  echo "MapMap has been successfully installed!"
-}
-
-# Function to detect OS and call appropriate installation method
-detect_os_and_install() {
-  UNAME_OUT="$(uname -s)"
-  case "${UNAME_OUT}" in
-      Linux*)     OS="Linux";;
-      Darwin*)    OS="Mac";;
-      CYGWIN*|MINGW*|MSYS*) OS="Windows";;
-      *)          OS="UNKNOWN:${UNAME_OUT}"
-  esac
-
-  if [ "${OS}" = "Mac" ]; then
-    install_macos
-  elif [ "${OS}" = "Windows" ]; then
-    install_windows
-  else
-    echo "Unsupported OS: ${OS}"
+# Detect the platform
+PLATFORM="unknown"
+ARCH="unknown"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    PLATFORM="macOS"
+    ARCH=$(uname -m)
+elif [[ "$OSTYPE" == "linux-gnu"* || "$OSTYPE" == "cygwin" || "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
+    PLATFORM="Windows"
+else
+    echo "Unsupported platform: $OSTYPE"
     exit 1
-  fi
+fi
+
+# Download and install the latest version based on platform and architecture
+download_and_install() {
+    local url=$1
+    local file_name=$2
+    echo "Downloading $file_name..."
+    
+    curl -L -o "$file_name" "$url"
+
+    if [[ $? -ne 0 ]]; then
+        echo "Error downloading $file_name"
+        exit 1
+    fi
+
+    echo "Downloaded $file_name successfully."
+    
+    if [[ "$PLATFORM" == "macOS" ]]; then
+        echo "Mounting DMG..."
+        hdiutil attach "$file_name" -nobrowse
+
+        echo "Copying the app to /Applications..."
+        cp -r /Volumes/MapMap/MapMap.app /Applications/
+
+        echo "Unmounting DMG..."
+        hdiutil detach /Volumes/MapMap
+
+        echo "Cleaning up..."
+        rm "$file_name"
+
+        echo "MapMap has been installed successfully!"
+    elif [[ "$PLATFORM" == "Windows" ]]; then
+        echo "Running the installer..."
+        start "$file_name"
+    fi
 }
 
-# Start installation process
-detect_os_and_install
+# macOS Installation
+if [[ "$PLATFORM" == "macOS" ]]; then
+    if [[ "$ARCH" == "arm64" ]]; then
+        echo "Detected macOS ARM architecture."
+        download_and_install "$ARM_DMG_URL" "MapMap_arm64.dmg"
+    elif [[ "$ARCH" == "x86_64" ]]; then
+        echo "Detected macOS Intel architecture."
+        download_and_install "$INTEL_DMG_URL" "MapMap_x86.dmg"
+    else
+        echo "Unsupported macOS architecture: $ARCH"
+        exit 1
+    fi
+
+# Windows Installation
+elif [[ "$PLATFORM" == "Windows" ]]; then
+    echo "Detected Windows platform."
+    download_and_install "$WIN_EXE_URL" "MapMap_win.exe"
+fi
+
