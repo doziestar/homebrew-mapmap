@@ -3,7 +3,7 @@ class Mapmap < Formula
   homepage "https://github.com/ProPro-Productions/MapMap"
   license "MIT"
 
-  ARM_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_0.1.5_arm64.dmg"
+  ARM_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_arm64.dmg"
   INTER_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_0.1.1_x86.dmg"
 
   if OS.mac?
