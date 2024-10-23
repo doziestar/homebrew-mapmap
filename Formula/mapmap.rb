@@ -3,23 +3,26 @@ class Mapmap < Formula
   homepage "https://github.com/ProPro-Productions/MapMap"
   license "MIT"
 
-  ARM_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_arm64.dmg"
-  INTER_DMG_URL="https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_x86.dmg"
-
   if OS.mac?
     if Hardware::CPU.intel?
-      url ARM_DMG_URL
+      url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_x86.dmg"
       sha256 "0315975c743e5579e3880cd6026a6f4bdc325ebf7ca7709daee5f08431388ff0"
     elsif Hardware::CPU.arm?
-      url INTER_DMG_URL
-      sha256 "0315975c743e5579e3880cd6026a6f4bdc325ebf7ca7709daee5f08431388ff0"
+      url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_arm64.dmg"
+      sha256 "ff7454fe7e042967f68f862fb1c6d777deb37cee12cebafb49acf07458f3341b"
     end
   else
     odie "Unsupported operating system"
   end
 
   def install
-    prefix.install Dir["MapMap.app"]
+    system "hdiutil", "attach", cached_download, "-nobrowse"
+    
+    app_path = "/Volumes/MapMap/MapMap.app"
+    prefix.install Dir[app_path]
+
+    system "hdiutil", "detach", "/Volumes/MapMap"
+    
     bin.write_exec_script "#{prefix}/MapMap.app/Contents/MacOS/mapmap"
   end
 
