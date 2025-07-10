@@ -3,31 +3,25 @@ class Mapmap < Formula
   homepage "https://github.com/ProPro-Productions/MapMap"
   license "MIT"
 
+  version "0.1.1"
+
   if OS.mac?
-    if Hardware::CPU.intel?
-      url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_x86.dmg"
-      sha256 "cae43c217e2b669b91f8b126266f6cb97057a2bfac5189b3e734e4126d0bd8ed"
     elsif Hardware::CPU.arm?
-      url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/MapMap_latest_arm64.dmg"
-      sha256 "cae43c217e2b669b91f8b126266f6cb97057a2bfac5189b3e734e4126d0bd8ed"
+      url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/darwin-aarch64/MapMap_#{version}_darwin-aarch64.app.tar.gz"
+      sha256 "97c51fd5705811570590c077b5f377376b8ea7087fc11334c2692693c632d28a"
     end
   else
-    odie "Unsupported operating system"
+    odie "Unsupported operating system. MapMap is currently only available for macOS."
   end
 
   def install
-    system "hdiutil", "attach", cached_download, "-nobrowse"
-
-    app_path = "/Volumes/MapMap/MapMap.app"
-    if File.exist?(app_path)
-      prefix.install Dir["#{app_path}"]
-    else
-      odie "MapMap.app not found in the mounted DMG"
+    system "tar", "-xzf", cached_download
+    app_bundle = Dir["*.app"].first
+    if app_bundle.nil?
+      odie "MapMap.app not found in the downloaded archive"
     end
-
-    system "hdiutil", "detach", "/Volumes/MapMap"
-
-    bin.write_exec_script "#{prefix}/MapMap.app/Contents/MacOS/mapmap"
+    prefix.install app_bundle
+    bin.write_exec_script "#{prefix}/#{app_bundle}/Contents/MacOS/mapmap"
   end
 
   def caveats
@@ -36,12 +30,18 @@ class Mapmap < Formula
         #{prefix}
 
       To start MapMap, you can:
-      1. Double click on MapMap.app in your Applications folder
+      1. Use Spotlight search or find MapMap.app in your Applications folder
       2. Run `mapmap` in your terminal
+
+      The app may need to be authorized in System Preferences > Security & Privacy
+      on first launch due to Apple requirements.
     EOS
   end
 
   test do
-    assert_predicate "#{prefix}/MapMap.app/Contents/MacOS/mapmap", :exist?
+    app_bundle = Dir["#{prefix}/*.app"].first
+    assert_predicate Pathname.new(app_bundle), :exist?, "MapMap.app should be installed"
+    executable = "#{app_bundle}/Contents/MacOS/mapmap"
+    assert_predicate Pathname.new(executable), :exist?, "Main executable should exist"
   end
 end
