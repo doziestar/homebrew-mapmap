@@ -1,11 +1,11 @@
 {
-  "version": "0.9.2",
+  "version": "0.9.4",
   "notes": "Update available with new features and improvements. Click to update now!",
-  "pub_date": "2025-07-10T12:41:36Z",
+  "pub_date": "2025-07-10T13:00:08Z",
   "platforms": {
     "darwin-aarch64": {
-       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcDk3bytjMjhJY1V2NUtmQURveGoyYjlTU2RMczVaaVBQdWlWcS9nVCtYcFpvbU11c29zNEtibVV5VTArVEtZaUFDTmZFSS9JUTdCWnlybWxaNDlJNUsvMSs1OFM3RlFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUyMTUxMTg4CWZpbGU6TWFwTWFwLmFwcC50YXIuZ3oKOGJaRjhiRElGd3Q0RkpMSFZyT29hemlXUFJhRHI4bzE3S1pVVkRYYmFIeWtUQ3ZFRnl3Rjh1QTlrdW01ZHA2bTBuTi9lVWhrV2N5RWpKSXFIeDZvQ3c9PQo=",
-       "url": "https://github.com/doziestar/homebrew-mapmap/raw/main/download/darwin-aarch64/MapMap_0.9.2_darwin-aarch64.app.tar.gz"
+       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcDk3bytjMjhJY2JzczNWZ0Fpb1lGVXQ1V1ZrLzBjTllxWC92dWdXVTl0bmhGSlpFUWZwRyt3cEpBSUkvRy9laXJ6YnRSYnQrMEtSbGdpaWhDUGxBQlJIZ1NrTjE3UkFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUyMTUyMjg4CWZpbGU6TWFwTWFwLmFwcC50YXIuZ3oKd3Fjb25SRFpFZTByTmtONnpBNFc0OGwzL0xPd1hxSGFJSWZiQ010cG8zNnhVTk5CSEVhRTFmR1U0cGU4a2t6a0lTNEwzK01ENnJmUHVIRlkvdW9GQXc9PQo=",
+       "url": "https://github.com/doziestar/homebrew-mapmap/raw/main/download/darwin-aarch64/MapMap_0.9.4_darwin-aarch64.app.tar.gz"
      }
   }
 }
