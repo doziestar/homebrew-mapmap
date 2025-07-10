@@ -3,12 +3,12 @@ class Mapmap < Formula
   homepage "https://github.com/ProPro-Productions/MapMap"
   license "MIT"
 
-  version "0.1.2"
+  version "0.9.1"
 
   if OS.mac?
     elsif Hardware::CPU.arm?
       url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/darwin-aarch64/MapMap_#{version}_darwin-aarch64.app.tar.gz"
-      sha256 "dbaac5a316ace2e72f10ce8426b5fc4b52c8564570ab69a30661932cb652ec5f"
+      sha256 "8002c55381611ea59519a4bf46f6a418853f51267cf71685886bc3160762c594"
     end
   else
     odie "Unsupported operating system. MapMap is currently only available for macOS."
