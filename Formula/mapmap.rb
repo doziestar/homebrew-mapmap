@@ -8,7 +8,7 @@ class Mapmap < Formula
   if OS.mac?
     elsif Hardware::CPU.arm?
       url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/darwin-aarch64/MapMap_#{version}_darwin-aarch64.app.tar.gz"
-      sha256 "88a148c02ed8dc3c727f92f285b2373815676e6719091357e2dfd03cdd548064"
+      sha256 "13937d176a72b0095d11420b30ead02c49fc6f9328e4dfc85cd2a1bb88c4bda5"
     end
   else
     odie "Unsupported operating system. MapMap is currently only available for macOS."
