@@ -1,17 +1,16 @@
 class Mapmap < Formula
-  desc "MapMap - Write your thoughts, ideas, and plans in a hierarchical tree diagram"
+  desc "MapMap - Hierarchical mind mapping and note-taking application"
   homepage "https://github.com/ProPro-Productions/MapMap"
   license "MIT"
 
-  version "0.9.4"
+  version "0.9.11"
 
-  if OS.mac?
-    elsif Hardware::CPU.arm?
-      url "https://github.com/doziestar/homebrew-mapmap/raw/main/download/darwin-aarch64/MapMap_#{version}_darwin-aarch64.app.tar.gz"
-      sha256 "13937d176a72b0095d11420b30ead02c49fc6f9328e4dfc85cd2a1bb88c4bda5"
-    end
-  else
-    odie "Unsupported operating system. MapMap is currently only available for macOS."
+  if Hardware::CPU.intel?
+    url ""
+    sha256 ""
+  elsif Hardware::CPU.arm?
+    url "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.11/darwin-aarch64/MapMap_0.9.11_darwin-aarch64.app.tar.gz"
+    sha256 ""
   end
 
   def install
@@ -26,22 +25,24 @@ class Mapmap < Formula
 
   def caveats
     <<~EOS
-      MapMap has been installed at:
-        #{prefix}
+      MapMap has been installed successfully!
 
-      To start MapMap, you can:
-      1. Use Spotlight search or find MapMap.app in your Applications folder
-      2. Run `mapmap` in your terminal
+      To start MapMap:
+      • Use Spotlight search or find MapMap.app in Applications
+      • Run `mapmap` in your terminal
 
-      The app may need to be authorized in System Preferences > Security & Privacy
-      on first launch due to Apple requirements.
+      Note: The app may require authorization in System Preferences
+      > Security & Privacy on first launch (Apple requirement).
+
+      Automatic updates: MapMap will check for updates automatically
+      and notify you when new versions are available.
     EOS
   end
 
   test do
     app_bundle = Dir["#{prefix}/*.app"].first
-    assert_predicate Pathname.new(app_bundle), :exist?, "MapMap.app should be installed"
+    assert_predicate Pathname.new(app_bundle), :exist?
     executable = "#{app_bundle}/Contents/MacOS/mapmap"
-    assert_predicate Pathname.new(executable), :exist?, "Main executable should exist"
+    assert_predicate Pathname.new(executable), :exist?
   end
 end
