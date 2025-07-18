@@ -11,6 +11,8 @@ class Mapmap < Formula
   elsif Hardware::CPU.arm?
     url "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.12/darwin-aarch64/MapMap_0.9.12_darwin-aarch64.app.tar.gz"
     sha256 ""
+  else
+    odie "Unsupported operating system. MapMap is currently only available for macOS."
   end
 
   def install
