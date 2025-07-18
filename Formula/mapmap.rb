@@ -3,13 +3,13 @@ class Mapmap < Formula
   homepage "https://github.com/ProPro-Productions/MapMap"
   license "MIT"
 
-  version "0.9.11"
+  version "0.9.12"
 
   if Hardware::CPU.intel?
     url ""
     sha256 ""
   elsif Hardware::CPU.arm?
-    url "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.11/darwin-aarch64/MapMap_0.9.11_darwin-aarch64.app.tar.gz"
+    url "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.12/darwin-aarch64/MapMap_0.9.12_darwin-aarch64.app.tar.gz"
     sha256 ""
   end
 

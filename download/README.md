@@ -9,13 +9,13 @@ All downloads are hosted on Amazon S3 for optimal performance and reliability.
 
 ## 📦 Manual Downloads
 
-### Current Version: v0.9.11
+### Current Version: v0.9.12
 
 ### darwin-aarch64
 
-- **Download**: [https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.11/dmg/MapMap_0.9.11_darwin-aarch64.dmg](https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.11/dmg/MapMap_0.9.11_darwin-aarch64.dmg)
+- **Download**: [https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.12/dmg/MapMap_0.9.12_darwin-aarch64.dmg](https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.12/dmg/MapMap_0.9.12_darwin-aarch64.dmg)
 
 ### darwin-x86-64
 
-- **Download**: [https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.11/dmg/MapMap_0.9.11_darwin-x86_64.dmg](https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.11/dmg/MapMap_0.9.11_darwin-x86_64.dmg)
+- **Download**: [https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.12/dmg/MapMap_0.9.12_darwin-x86_64.dmg](https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.12/dmg/MapMap_0.9.12_darwin-x86_64.dmg)
 
