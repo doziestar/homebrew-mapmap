@@ -3,17 +3,12 @@ class Mapmap < Formula
   homepage "https://github.com/ProPro-Productions/MapMap"
   license "MIT"
 
-  version "0.9.14"
+  version "0.9.15"
 
-  if Hardware::CPU.intel?
-    url "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.14/darwin-x86_64/MapMap_0.9.14_darwin-x86_64.app.tar.gz"
-    sha256 "5d6dbefcc36a3c3d39244c23d591cd79d3a32d6ddcc7d976d7a90bab7cbefc99"
-  elsif Hardware::CPU.arm?
-    url "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.14/darwin-aarch64/MapMap_0.9.14_darwin-aarch64.app.tar.gz"
-    sha256 "094bcea325c06af42c9f6311af8007d0e2fd09cbcaa998b560fe78c246583511"
-  else
-    odie "Unsupported architecture. MapMap requires Intel or Apple Silicon."
-  end
+  url "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.15/darwin-aarch64/MapMap_0.9.15_darwin-aarch64.app.tar.gz"
+  sha256 "a6b8733774e0cdf4178c69fac1f558edd0f30f796ceb4a3be3d6032c71d796d8"
+
+  # Note: This build is optimized for Apple Silicon but works on Intel Macs via Rosetta
 
   def install
     system "tar", "-xzf", cached_download
@@ -21,28 +16,49 @@ class Mapmap < Formula
     if app_bundle.nil?
       odie "MapMap.app not found in the downloaded archive"
     end
-    prefix.install app_bundle
-    bin.write_exec_script "#{prefix}/#{app_bundle}/Contents/MacOS/mapmap"
+    # Install to Applications folder
+    applications_dir = "/Applications"
+    # Check if we can write to /Applications, otherwise use ~/Applications
+    unless File.writable?(applications_dir)
+      applications_dir = File.expand_path("~/Applications")
+      Dir.mkdir(applications_dir) unless Dir.exist?(applications_dir)
+    end
+    # Copy the app to Applications
+    system "cp", "-R", app_bundle, applications_dir
+    # Create a symlink in Homebrew prefix for the executable
+    bin.install_symlink "#{applications_dir}/#{app_bundle}/Contents/MacOS/mapmap"
   end
 
   def caveats
     <<~EOS
       MapMap has been installed successfully!
 
-      To start MapMap:
-      • Use Spotlight search or find MapMap.app in Applications
+      📱 App Location:
+      • MapMap.app has been installed to your Applications folder
+      • You can find it in Spotlight search or Applications folder
+
+      🚀 How to start MapMap:
+      • Double-click MapMap.app in Applications
+      • Use Spotlight (Cmd+Space) and type "MapMap"
       • Run `mapmap` in your terminal
 
-      Note: The app may require authorization in System Preferences
-      > Security & Privacy on first launch (Apple requirement).
+      🔒 First Launch:
+      • The app may require authorization in System Preferences
+      • Go to Security & Privacy > General and click "Allow"
 
-      Automatic updates: MapMap will check for updates automatically
-      and notify you when new versions are available.
+      🔄 Automatic Updates:
+      • MapMap will check for updates automatically
+      • You will be notified when new versions are available
     EOS
   end
 
   test do
-    app_bundle = Dir["#{prefix}/*.app"].first
+    # Check if app is installed in Applications
+    applications_dir = "/Applications"
+    unless File.writable?(applications_dir)
+      applications_dir = File.expand_path("~/Applications")
+    end
+    app_bundle = "#{applications_dir}/MapMap.app"
     assert_predicate Pathname.new(app_bundle), :exist?
     executable = "#{app_bundle}/Contents/MacOS/mapmap"
     assert_predicate Pathname.new(executable), :exist?
