@@ -3,10 +3,10 @@ class Mapmap < Formula
   homepage "https://github.com/ProPro-Productions/MapMap"
   license "MIT"
 
-  version "0.9.15"
+  version "1.0.0"
 
-  url "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v0.9.15/darwin-aarch64/MapMap_0.9.15_darwin-aarch64.app.tar.gz"
-  sha256 "a6b8733774e0cdf4178c69fac1f558edd0f30f796ceb4a3be3d6032c71d796d8"
+  url "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.0/darwin-aarch64/MapMap_1.0.0_darwin-aarch64.app.tar.gz"
+  sha256 "7b62b860bc990d1c1323bf079ff81f294274d68e88c68d7f7e3036daeca598eb"
 
   # Note: This build is optimized for Apple Silicon but works on Intel Macs via Rosetta
 
