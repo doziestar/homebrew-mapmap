@@ -1,16 +1,16 @@
 {
   "version": "1.0.0",
   "notes": "🎉 MapMap 1.0.0 is ready! New features, improvements, and bug fixes included. Click to update now for the best experience!",
-  "pub_date": "2025-07-29T08:49:08Z",
+  "pub_date": "2025-08-25T08:22:21Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcDk3bytjMjhJY2RuZzJ3RCtqaEh3TENjKzZuM0E1TFppMVFqVkdObG9CbXZycWt0SDZXZWpnNjJoNkNaTjJQZ3lIUkNEdVkwRWQ1ekQyQTI4SnBiMzNlMlExSlBwcHdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUzNzc4MTMzCWZpbGU6TWFwTWFwLmFwcC50YXIuZ3oKZ0t4QjV5WHNWRWdscDU1SXg0ZWFFcUtJSUMvMndlckpFQlJ0Z0pQOUVFSFNPSkVVSUNzUUpGMythUENzbDFrZHdhY0I1eHJCZXNKMDJsNlNPTXlsQUE9PQo=",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcDk3bytjMjhJY1FQVGdFNGw2N2wzcTlieHdOTEFxYVNGZHg3ZHZUYW5zand4SG9nWHBhTDRBMXVuZXlNQXlNSUN3RkRoOC9TamE1QUJRWkg1OC94bitEc3d6emlxOEFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU2MTA5MDEyCWZpbGU6TWFwTWFwLmFwcC50YXIuZ3oKM0dBd2lCSk44VnY4RzA3S2IxVEJub0tNZWhaTUdCMXZ6ek85ek5LQjcxbi9KRFc0SjRPM0llRktQSldyNmdlRldGZ0d1dDZQeTgrMFJUWGtLKzFIRGc9PQo=",
       "url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.0/darwin-aarch64/MapMap_1.0.0_darwin-aarch64.app.tar.gz",
       "dmg_url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.0/dmg/MapMap_1.0.0_darwin-aarch64.dmg"
     }
 ,
     "darwin-x86-64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcDk3bytjMjhJY1d4dDVPaXNGS3FxUTJsWWFVTWdzNE5CL2lxWmp2Um5FTnhSaTZVTkV1T05mTlpycGhablBBOStMamNiSUNydjJPZk5JenMyRjNUbjhhbHlESmdxSGdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUzNzc4NzI5CWZpbGU6TWFwTWFwLmFwcC50YXIuZ3oKbkowaTVTOTNaaW9ZVkNXbUM4QnpmOXVXUkdIMzFwQ0kwam1XZzVucVRCVVcyQVpKZWJWMmNIQzJJdU15QUh4WlkwNDd2SzBweTB6UmpsQlNteFA1Qmc9PQo=",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcDk3bytjMjhJY2ZoOTVpNHljdUlKbnZjb3Z4QTRYTm1pdHRXMWJoSllkSjRNQU5TMTBqekZtTmFXN1RTcys3YWJqYloxRjdXcklraVAxZDN3eWY3QTYvODE0dlJuMGdZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU2MTA5NzYwCWZpbGU6TWFwTWFwLmFwcC50YXIuZ3oKME5NM3VMMDBzNGpxUzBwN0xHY3kzdnZCSC9hUU5kZVhiQWJNZUpUYkg1Q0pkd2Q3YStZMGErQWNIdjliTWNPMjJUQTRqdjJQZUlkdGxjSDE3Z0x5Q3c9PQo=",
       "url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.0/darwin-x86_64/MapMap_1.0.0_darwin-x86_64.app.tar.gz",
       "dmg_url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.0/dmg/MapMap_1.0.0_darwin-x86_64.dmg"
     }
