@@ -1,18 +1,12 @@
 {
-  "version": "1.0.9",
-  "notes": "🎉 MapMap 1.0.9 is ready! New features, improvements, and bug fixes included. Click to update now for the best experience!",
-  "pub_date": "2025-08-26T07:38:21Z",
+  "version": "1.0.10",
+  "notes": "🎉 MapMap 1.0.10 is ready! New features, improvements, and bug fixes included. Click to update now for the best experience!",
+  "pub_date": "2025-08-26T09:12:27Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcDk3bytjMjhJY2RaUFE3bU13WnV2emsyNEhUYXE2bllteFAwdTFPazQzYyt5aGxTd0ZiSkNxUVNwYnllQ1ZIMmpnMGhDdVV0M1JPeEo4SHF6M25VeEp6b0hzMkt2OFFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU2MTkyNDgxCWZpbGU6TWFwTWFwLmFwcC50YXIuZ3oKM1R6RDFiaWc2SDZTS3liRHp5VFVzVFFHN1JqaFUxdHZ1VHlYWXoxSEZpOGczRmprNUJSdG9Pbk1iclpDQzQzMGd0Sm5WSm0yVkdxaDNmT2ovUnJsQ3c9PQo=",
-      "url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.9/darwin-aarch64/MapMap_1.0.9_darwin-aarch64.app.tar.gz",
-      "dmg_url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.9/dmg/MapMap_1.0.9_darwin-aarch64.dmg"
-    }
-,
-    "darwin-x86-64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcDk3bytjMjhJY2E1dHBoVDlrY3dMK055SE9tUzhPcFpnY1ZUb2l1Wi8rQkJMS0N6VkIrUUttdFRQOEVHV3FML1lpaUpTN21SYXJhUjRoT0VhVnBWcnNvSFRZRnlYVFFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU2MTkzMzExCWZpbGU6TWFwTWFwLmFwcC50YXIuZ3oKS3pBQ2t3eUprZFlBWHM0UUNSMzZQMWFaamVnT0pQSC9taTd5Yy9YdHBtZkp1NmV0QUN3VEFHSExVTzB1OWVTZDN4VGJNV3FLb3pkSWUxbzR0eUEvQ1E9PQo=",
-      "url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.9/darwin-x86_64/MapMap_1.0.9_darwin-x86_64.app.tar.gz",
-      "dmg_url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.9/dmg/MapMap_1.0.9_darwin-x86_64.dmg"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcDk3bytjMjhJY2ZPMi9RWFQ2WUlpTTd5WlhTMDh3Q1RCT3pFRnIzVzRuVGtLY2FoZVlYcXd1cnorNmgxaUZrRWJyS3MrRHJaYWdwdU9GVkVaZ0xiTnBrUlVkd3dkYndzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU2MTk5MjQxCWZpbGU6TWFwTWFwLmFwcC50YXIuZ3oKZmVwbzZTMks5bURLeDU0ZDZ0eVY2TTBmSERyV0tHcktUL3NnSDBsZkJMdCsraEV5WkdrN0JVTnVKMnIzMEY1eGJkanphcWNVa1h5eUd5NVZZekJ6QVE9PQo=",
+      "url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.10/darwin-aarch64/MapMap_1.0.10_darwin-aarch64.app.tar.gz",
+      "dmg_url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.10/dmg/MapMap_1.0.10_darwin-aarch64.dmg"
     }
   }
 }
