@@ -9,15 +9,15 @@ All downloads are hosted on Amazon S3 for optimal performance and reliability.
 
 ## 📦 Manual Downloads
 
-### Current Version: v1.0.0
+### Current Version: v1.0.9
 
 ### darwin-aarch64
 
-- **Download**: [https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.0/dmg/MapMap_1.0.0_darwin-aarch64.dmg](https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.0/dmg/MapMap_1.0.0_darwin-aarch64.dmg)
-- **SHA256**: `c206ad49cbc5d7974575b99336c01ec7156404ee8f377e5cf11c6162113497ba`
+- **Download**: [https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.9/dmg/MapMap_1.0.9_darwin-aarch64.dmg](https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.9/dmg/MapMap_1.0.9_darwin-aarch64.dmg)
+- **SHA256**: `0adce2a87dc639cfe548f0fbf17d33595454c12194a8c7f6ad9f9472e6fe804f`
 
 ### darwin-x86-64
 
-- **Download**: [https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.0/dmg/MapMap_1.0.0_darwin-x86_64.dmg](https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.0/dmg/MapMap_1.0.0_darwin-x86_64.dmg)
-- **SHA256**: `44291e97971a0ee63fd489666dd08d79ab60df5d9bd6384ae7f25198ab5fda93`
+- **Download**: [https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.9/dmg/MapMap_1.0.9_darwin-x86_64.dmg](https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.9/dmg/MapMap_1.0.9_darwin-x86_64.dmg)
+- **SHA256**: `7225bb5f5bd310128a824726b58831088fe2ad351d1ac4655d3089b4d4cdd8d9`
 
