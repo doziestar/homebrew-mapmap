@@ -9,8 +9,8 @@ class Mapmap < Formula
     url "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.9/darwin-x86_64/MapMap_1.0.9_darwin-x86_64.app.tar.gz"
     sha256 "e83b3afeedfc81fe1f8441df0d55e28cf8524c0661fb9c299ce6752aee2129be"
   elsif Hardware::CPU.arm?
-    url "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.16/darwin-aarch64/MapMap_1.0.16_darwin-aarch64.app.tar.gz"
-    sha256 "a28be65fc237cc3506006fb639d422f0a46d20c20ec1a38d5fde8620c3fac423"
+    url "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.17/darwin-aarch64/MapMap_1.0.17_darwin-aarch64.app.tar.gz"
+    sha256 "8c0d14be0a1394d92b1b32d77b6d43958247db354307bf78de1ae53ab92f2b4b"
   else
     odie "Unsupported architecture. MapMap requires Intel or Apple Silicon."
   end

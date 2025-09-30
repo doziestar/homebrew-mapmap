@@ -13,9 +13,9 @@ All downloads are hosted on Amazon S3 for optimal performance and reliability.
 
 ### macOS (Apple Silicon)
 
-- **Download**: [https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.16/dmg/MapMap_1.0.16_darwin-aarch64.dmg](https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.16/dmg/MapMap_1.0.16_darwin-aarch64.dmg)
-- **SHA256**: `fccbab7312ad320223c134c2c6343bdceef1d481a1113ef7de24df7a879af04d`
-- **Size**: 118MB
+- **Download**: [https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.17/dmg/MapMap_1.0.17_darwin-aarch64.dmg](https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.17/dmg/MapMap_1.0.17_darwin-aarch64.dmg)
+- **SHA256**: `85900bfbffdad17cede9863fcacaf53e49d7f2c9c4a657776c859928fc331a08`
+- **Size**: 137MB
 
 ### macOS (Intel)
 
