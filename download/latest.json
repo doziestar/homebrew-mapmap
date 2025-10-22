@@ -1,12 +1,12 @@
 {
-  "version": "1.0.21",
-  "notes": "🎉 MapMap 1.0.21 is ready! New features, improvements, and bug fixes included. Click to update now for the best experience!",
-  "pub_date": "2025-10-17T15:51:17Z",
+  "version": "1.0.22",
+  "notes": "🎉 MapMap 1.0.22 is ready! New features, improvements, and bug fixes included. Click to update now for the best experience!",
+  "pub_date": "2025-10-21T17:42:51Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcDk3bytjMjhJY2FWeEF0Yng3SFNSYnpsQW5meEhycWdBTzh4eXhTNDkyS0p3SWUxYVNZNVBWNk00RmNPU3ArVGpXMzUyWk5WTmpScXB2TjRWQStXRmNVQ2FrbjduWGdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzYwNzE1NTYzCWZpbGU6TWFwTWFwLmFwcC50YXIuZ3oKazNsYmFzeDFIeForYkR5blNObTJIRDM3UFZZR0wzUmMzZmk0b2g2RzErbHpGSnBQNkNwNUlxYjlJc0JqNVNBMEpIQUpsWFZKT2xHTDNNaEE0QS9LQ0E9PQo=",
-      "url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.21/darwin-aarch64/MapMap_1.0.21_darwin-aarch64.app.tar.gz",
-      "dmg_url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.21/dmg/MapMap_1.0.21_darwin-aarch64.dmg"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcDk3bytjMjhJY2RlUFRxSmlDdWFxWGZDcWZQZ1pnYU12MG1QYVhNd05JTlhVL2NjK3ZzcVJ6VStLZk9SZDJ1UTVmSFFFdVlER1ZhSUhyLzNEY0RZYldFclIvcGc4NkFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzYxMDY3OTQwCWZpbGU6TWFwTWFwLmFwcC50YXIuZ3oKOEJuWDdPTEZtNGVEZUVUSmFJSTFYZXJNZHZ6OXFJcU5XUEkyVEJGZ1NrS2NUaEJ0aUlzRnBoeFFBZkNuNU9DdENLQkVsa0VYSVkxakQycjdaY3ZFRGc9PQo=",
+      "url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.22/darwin-aarch64/MapMap_1.0.22_darwin-aarch64.app.tar.gz",
+      "dmg_url": "https://mapmap-prod.s3.us-east-1.amazonaws.com/releases/v1.0.22/dmg/MapMap_1.0.22_darwin-aarch64.dmg"
     },
     "darwin-x86_64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcDk3bytjMjhJY2E1dHBoVDlrY3dMK055SE9tUzhPcFpnY1ZUb2l1Wi8rQkJMS0N6VkIrUUttdFRQOEVHV3FML1lpaUpTN21SYXJhUjRoT0VhVnBWcnNvSFRZRnlYVFFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU2MTkzMzExCWZpbGU6TWFwTWFwLmFwcC50YXIuZ3oKS3pBQ2t3eUprZFlBWHM0UUNSMzZQMWFaamVnT0pQSC9taTd5Yy9YdHBtZkp1NmV0QUN3VEFHSExVTzB1OWVTZDN4VGJNV3FLb3pkSWUxbzR0eUEvQ1E9PQo=",
